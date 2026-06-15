@@ -3,228 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio - แนะนำตัวเอง</title>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        html{
+            scroll-behavior:smooth;
         }
 
-        body {
-            font-family: 'Sarabun', 'Segoe UI', sans-serif;
-            background: #E3F2FD;
-            color: #333;
-            line-height: 1.6;
+        body{
+            font-family:'Sarabun','Segoe UI',sans-serif;
+            background:#E3F2FD;
+            color:#333;
         }
 
         /* Navbar */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #2196F3;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .navbar{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:#2196F3;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .nav-container {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 15px;
+        .nav-container{
+            max-width:1200px;
+            margin:auto;
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            padding:16px;
         }
 
-        .nav-container a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
+        .nav-container a{
+            color:white;
+            text-decoration:none;
+            font-weight:600;
+            transition:.3s;
         }
 
-        .nav-container a:hover {
-            color: #E3F2FD;
-            transform: translateY(-2px);
+        .nav-container a:hover{
+            color:#BBDEFB;
         }
 
-        section {
-            padding: 80px 20px;
+        section{
+            padding:80px 20px;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
+        .container{
+            max-width:1000px;
+            margin:auto;
         }
 
         /* Hero */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        .hero{
+            min-height:90vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
         }
 
-        .hero-content {
-            background: #FFFFFF;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        .hero-card{
+            background:#fff;
+            padding:60px 40px;
+            border-radius:24px;
+            box-shadow:0 10px 30px rgba(33,150,243,.15);
+            width:100%;
+            max-width:800px;
         }
 
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 6px solid #2196F3;
-            object-fit: cover;
-            margin-bottom: 20px;
+        .hero h1{
+            font-size:3rem;
+            color:#2196F3;
+            margin-bottom:15px;
         }
 
-        .hero h1 {
-            color: #2196F3;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .hero .tagline{
+            font-size:1.3rem;
+            color:#666;
+            margin-bottom:25px;
         }
 
-        .tagline {
-            font-size: 1.2rem;
-            color: #666;
+        .hero .intro-badge{
+            display:inline-block;
+            background:#2196F3;
+            color:white;
+            padding:10px 22px;
+            border-radius:30px;
+            font-size:.95rem;
+            font-weight:600;
         }
 
-        /* Section Title */
-        .section-title {
-            text-align: center;
-            color: #2196F3;
-            margin-bottom: 40px;
-            font-size: 2rem;
+        /* Titles */
+        .section-title{
+            text-align:center;
+            color:#2196F3;
+            font-size:2.2rem;
+            margin-bottom:40px;
         }
 
         /* About */
-        .about-box {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            max-width: 800px;
-            margin: auto;
+        .about-box{
+            background:#fff;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0 5px 20px rgba(0,0,0,.08);
+            line-height:1.9;
         }
 
         /* Skills */
-        .skills-container {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
+        .skills-grid{
+            display:grid;
+            gap:20px;
         }
 
-        .skill {
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        .skill-card{
+            background:white;
+            padding:20px;
+            border-radius:16px;
+            box-shadow:0 4px 15px rgba(0,0,0,.06);
         }
 
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            font-weight: 600;
+        .skill-info{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:10px;
+            font-weight:600;
         }
 
-        .progress {
-            height: 12px;
-            background: #dbeeff;
-            border-radius: 20px;
-            overflow: hidden;
+        .progress{
+            width:100%;
+            height:14px;
+            background:#d8ebff;
+            border-radius:20px;
+            overflow:hidden;
         }
 
-        .progress-bar {
-            width: 0;
-            height: 100%;
-            background: linear-gradient(90deg, #2196F3, #64B5F6);
-            border-radius: 20px;
-            transition: width 1.8s ease;
+        .progress-bar{
+            width:0;
+            height:100%;
+            background:linear-gradient(
+                90deg,
+                #2196F3,
+                #64B5F6
+            );
+            border-radius:20px;
+            transition:width 2s ease;
         }
 
         /* Contact */
-        .contact-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 700px;
-            margin: auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        .contact-wrapper{
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            flex-wrap:wrap;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 18px 0;
+        .contact-item{
+            background:#fff;
+            padding:20px 25px;
+            border-radius:16px;
+            min-width:250px;
+            box-shadow:0 4px 15px rgba(0,0,0,.08);
+            transition:.3s;
         }
 
-        .contact-item a {
-            text-decoration: none;
-            color: #2196F3;
-            transition: 0.3s;
+        .contact-item:hover{
+            transform:translateY(-5px);
+            box-shadow:0 10px 20px rgba(33,150,243,.2);
         }
 
-        .contact-item a:hover {
-            color: #1565C0;
-            transform: translateX(5px);
+        .contact-item a{
+            text-decoration:none;
+            color:#2196F3;
+            font-weight:600;
         }
 
-        .icon {
-            font-size: 1.4rem;
+        .contact-icon{
+            font-size:1.5rem;
+            margin-right:8px;
         }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2196F3;
-            color: white;
+        footer{
+            text-align:center;
+            padding:25px;
+            background:#2196F3;
+            color:white;
+            margin-top:40px;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
+        @media (max-width:768px){
+
+            .nav-container{
+                flex-direction:column;
+                gap:12px;
+                text-align:center;
             }
 
-            .hero-content {
-                padding: 25px;
+            .hero{
+                min-height:75vh;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .hero h1{
+                font-size:2.2rem;
             }
 
-            .profile-img {
-                width: 160px;
-                height: 160px;
+            .hero .tagline{
+                font-size:1.05rem;
             }
 
-            .contact-item {
-                flex-direction: column;
-                align-items: flex-start;
+            .contact-wrapper{
+                flex-direction:column;
+            }
+
+            .contact-item{
+                width:100%;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home">หน้าแรก</a>
@@ -234,13 +244,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="https://placehold.co/200x200" alt="Profile" class="profile-img">
+        <div class="hero-card">
+            <span class="intro-badge">👋 ยินดีต้อนรับ</span>
 
             <h1>นายณัชพล ศรีทอง</h1>
-            <p class="tagline">Web Developer | UI/UX Enthusiast | Lifelong Learner</p>
+
+            <p class="tagline">
+                Front-End Developer • Web Designer • Tech Enthusiast
+            </p>
+
+            <p>
+                ชื่นชอบการพัฒนาเว็บไซต์ การออกแบบ UI/UX
+                และการเรียนรู้เทคโนโลยีใหม่ ๆ เพื่อสร้างผลงานที่มีคุณภาพ
+            </p>
         </div>
     </section>
 
@@ -251,10 +269,10 @@
 
             <div class="about-box">
                 <p>
-                    สวัสดีครับ/ค่ะ ผมเป็นผู้ที่มีความสนใจด้านการพัฒนาเว็บไซต์และเทคโนโลยีดิจิทัล
-                    ชื่นชอบการเรียนรู้สิ่งใหม่ ๆ และพัฒนาทักษะอยู่เสมอ
-                    มีความสนใจด้านการออกแบบประสบการณ์ผู้ใช้ (UX/UI) และการเขียนโปรแกรม
-                    เป้าหมายคือการสร้างผลงานที่มีคุณค่าและตอบโจทย์ผู้ใช้งานได้อย่างมีประสิทธิภาพ
+                    ผมเป็นผู้ที่มีความสนใจด้านการพัฒนาเว็บไซต์และเทคโนโลยีดิจิทัล
+                    มีความมุ่งมั่นในการเรียนรู้และพัฒนาทักษะใหม่ ๆ อยู่เสมอ
+                    ชื่นชอบการออกแบบประสบการณ์ผู้ใช้งานที่เรียบง่ายและใช้งานได้จริง
+                    โดยมีเป้าหมายในการสร้างผลงานที่ช่วยแก้ปัญหาและสร้างคุณค่าให้กับผู้ใช้งานได้อย่างมีประสิทธิภาพ
                 </p>
             </div>
         </div>
@@ -265,10 +283,10 @@
         <div class="container">
             <h2 class="section-title">ความสามารถพิเศษ</h2>
 
-            <div class="skills-container">
+            <div class="skills-grid">
 
-                <div class="skill">
-                    <div class="skill-header">
+                <div class="skill-card">
+                    <div class="skill-info">
                         <span>HTML</span>
                         <span>95%</span>
                     </div>
@@ -277,8 +295,8 @@
                     </div>
                 </div>
 
-                <div class="skill">
-                    <div class="skill-header">
+                <div class="skill-card">
+                    <div class="skill-info">
                         <span>CSS</span>
                         <span>90%</span>
                     </div>
@@ -287,8 +305,8 @@
                     </div>
                 </div>
 
-                <div class="skill">
-                    <div class="skill-header">
+                <div class="skill-card">
+                    <div class="skill-info">
                         <span>JavaScript</span>
                         <span>85%</span>
                     </div>
@@ -297,9 +315,9 @@
                     </div>
                 </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <span>UI/UX Design</span>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span>UI / UX Design</span>
                         <span>80%</span>
                     </div>
                     <div class="progress">
@@ -307,9 +325,9 @@
                     </div>
                 </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <span>Problem Solving</span>
+                <div class="skill-card">
+                    <div class="skill-info">
+                        <span>Communication</span>
                         <span>88%</span>
                     </div>
                     <div class="progress">
@@ -326,40 +344,33 @@
         <div class="container">
             <h2 class="section-title">ช่องทางติดต่อ</h2>
 
-            <div class="contact-card">
+            <div class="contact-wrapper">
 
                 <div class="contact-item">
-                    <span class="icon">📧</span>
+                    <span class="contact-icon">📧</span>
                     <a href="mailto:yourmail@example.com">
-                        yourmail@example.com
+                        std49135@sriyapai.ac.th.com
                     </a>
                 </div>
 
                 <div class="contact-item">
-                    <span class="icon">📱</span>
-                    <a href="tel:0812345678">
-                        081-234-5678
+                    <span class="contact-icon">📱</span>
+                    <a href="tel:095-276-3827">
+                        095-276-3827
                     </a>
                 </div>
 
                 <div class="contact-item">
-                    <span class="icon">🌐</span>
+                    <span class="contact-icon">🌐</span>
                     <a href="#" target="_blank">
                         Facebook
                     </a>
                 </div>
 
                 <div class="contact-item">
-                    <span class="icon">💼</span>
+                    <span class="contact-icon">💼</span>
                     <a href="#" target="_blank">
                         LinkedIn
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <span class="icon">📸</span>
-                    <a href="#" target="_blank">
-                        Instagram
                     </a>
                 </div>
 
@@ -368,17 +379,17 @@
     </section>
 
     <footer>
-        © 2026 My Portfolio. All Rights Reserved.
+        © 2026 Personal Portfolio Website
     </footer>
 
     <script>
-        // Animate Skill Bars on Load
-        window.addEventListener('load', () => {
-            const bars = document.querySelectorAll('.progress-bar');
+        // Animate Progress Bars
+        window.addEventListener("load", () => {
+            const bars = document.querySelectorAll(".progress-bar");
 
             setTimeout(() => {
                 bars.forEach(bar => {
-                    bar.style.width = bar.dataset.width + '%';
+                    bar.style.width = bar.dataset.width + "%";
                 });
             }, 300);
         });
